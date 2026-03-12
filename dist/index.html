@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P.S.H.T. - Persatuan Stellaron HunTer</title>
+    <link rel="stylesheet" href="build.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Outfit:wght@400;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+        
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+        }
+
+        .hero-title {
+            font-family: 'Righteous', sans-serif;
+            font-size: 5rem;
+            font-weight: 900;
+            letter-spacing: 2px;
+            line-height: 1;
+        }
+
+        .firefly {
+            background: linear-gradient(135deg, #f5e6c8 0%, #1a5f6f 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            display: inline-block;
+        }
+
+        .kafka {
+            background: linear-gradient(135deg, #a0005f 0%, #f0d5e5 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            display: inline-block;
+        }
+
+        .silver-wolf {
+            background: linear-gradient(135deg, #d4d5f7 0%, #3a3863 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            display: inline-block;
+        }
+
+        .blade {
+            background: linear-gradient(135deg, #d6d8dc 0%, #8b0000 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            display: inline-block;
+        }
+
+        .carousel-image {
+            width: 900px;
+            height: 506px;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+
+        .carousel-thumb {
+            width: 150px;
+            height: 50px;
+            object-fit: cover;
+            border-radius: 8px;
+            cursor: pointer;
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+        }
+        .carousel-thumb.active {
+            border-color: #ec4899;
+            box-shadow: 0 0 15px rgba(236, 72, 153, 0.5);
+        }
+
+        .carousel-thumb:hover {
+            transform: scale(1.05);
+            border-color: #a78bfa;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+            aspect-ratio: 2/1;
+            background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .nav-link {
+            color: #e2e8f0;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: #ec4899;
+        }
+
+        .btn-gradient {
+            background: linear-gradient(135deg, #ec4899 0%, #a78bfa 100%);
+            border: none;
+            color: white;
+        }
+
+        .btn-gradient:hover {
+            box-shadow: 0 0 20px rgba(236, 72, 153, 0.5);
+        }
+
+        .nav-item {
+            padding: 1.5rem 5.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .nav-item:hover {
+            background: linear-gradient(135deg, #ec4899 0%, #a78bfa 100%);
+            box-shadow: 0 0 15px rgba(236, 72, 153, 0.3);
+        }
+
+        #hero {
+            scroll-margin-top: -260px;
+        }
+
+        #gallery {
+            scroll-margin-top: 80px;
+        }
+
+        #cta {
+            scroll-margin-top: 80px;
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-50">
+    <!-- Navbar -->
+    <div class="navbar bg-slate-900/80 backdrop-blur sticky top-0 z-50 shadow-lg border-b border-slate-800">
+        <div class="flex-1 flex justify-center gap-8">
+            <a href="#hero" class="nav-item normal-case text-lg font-bold text-white hover:text-white">
+                CHARACTERS
+            </a>
+            <a href="#gallery" class="nav-item normal-case text-lg font-bold text-white hover:text-white">
+                GALLERY
+            </a>
+            <a href="#cta" class="nav-item normal-case text-lg font-bold text-white hover:text-white">
+                ABOUT US
+            </a>
+        </div>
+    </div>
+
+    <!-- Hero Section with Carousel -->
+    <section id="hero" class="py-16 px-4 md:px-0">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-12">
+                <h1 class="hero-title mb-4"><span class="kafka">P.</span><span class="silver-wolf">S.</span><span class="blade">H.</span><span class="firefly">T.</span></h1>
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-200 mb-8">Persatuan Stellaron HunTer</h2>
+                <p class="text-slate-400 text-lg max-w-2xl mx-auto">An organization that travels between worlds hunting for Stellarons. It is unknown which Aeon bestows them with their power.</p>
+            </div>
+
+            <!-- Main Carousel -->
+            <div class="mb-8">
+                <div class="carousel-wrapper w-3/4 mx-auto bg-slate-800/50 rounded-lg p-4 backdrop-blur">
+                    <div class="carousel w-full h-auto rounded-lg overflow-hidden scroll-smooth">
+                        <div id="slide1" class="carousel-item relative w-full">
+                            <img src="../src/assets/kafka.png" alt="Kafka" class="carousel-image">
+                            <div class="absolute left-4 right-4 top-1/2 flex -translate-y-1/2 justify-between z-20">
+                                <a href="#slide4" class="btn btn-circle btn-sm bg-white/20 border-0 hover:bg-white/40">❮</a>
+                                <a href="#slide2" class="btn btn-circle btn-sm bg-white/20 border-0 hover:bg-white/40">❯</a>
+                            </div>
+                        </div>
+                        <div id="slide2" class="carousel-item relative w-full">
+                            <img src="../src/assets/silver-wolf.png" alt="Silver Wolf" class="carousel-image">
+                            <div class="absolute left-4 right-4 top-1/2 flex -translate-y-1/2 justify-between z-20">
+                                <a href="#slide1" class="btn btn-circle btn-sm bg-white/20 border-0 hover:bg-white/40">❮</a>
+                                <a href="#slide3" class="btn btn-circle btn-sm bg-white/20 border-0 hover:bg-white/40">❯</a>
+                            </div>
+                        </div>
+                        <div id="slide3" class="carousel-item relative w-full">
+                            <img src="../src/assets/blade.jpeg" alt="Blade" class="carousel-image">
+                            <div class="absolute left-4 right-4 top-1/2 flex -translate-y-1/2 justify-between z-20">
+                                <a href="#slide2" class="btn btn-circle btn-sm bg-white/20 border-0 hover:bg-white/40">❮</a>
+                                <a href="#slide4" class="btn btn-circle btn-sm bg-white/20 border-0 hover:bg-white/40">❯</a>
+                            </div>
+                        </div>
+                        <div id="slide4" class="carousel-item relative w-full">
+                            <img src="../src/assets/firefly.jpeg" alt="Firefly" class="carousel-image">
+                            <div class="absolute left-4 right-4 top-1/2 flex -translate-y-1/2 justify-between z-20">
+                                <a href="#slide3" class="btn btn-circle btn-sm bg-white/20 border-0 hover:bg-white/40">❮</a>
+                                <a href="#slide1" class="btn btn-circle btn-sm bg-white/20 border-0 hover:bg-white/40">❯</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Thumbnail Navigation -->
+                <div class="flex gap-4 mt-6 justify-center">
+                    <a href="#slide1" class="carousel-thumb" alt="Kafka">
+                        <img src="../src/assets/kafka.png" alt="Kafka" class="w-full">
+                    </a>
+                    <a href="#slide2" class="carousel-thumb" alt="Silver Wolf">
+                        <img src="../src/assets/silver-wolf.png" alt="Silver Wolf" class="w-full">
+                    </a>
+                    <a href="#slide3" class="carousel-thumb" alt="Blade">
+                        <img src="../src/assets/blade.jpeg" alt="Blade" class="w-full">
+                    </a>
+                    <a href="#slide4" class="carousel-thumb" alt="Firefly">
+                        <img src="../src/assets/firefly.jpeg" alt="Firefly" class="w-full">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-20 px-4 md:px-0 bg-gradient-to-b from-slate-900 to-slate-950">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-4 text-slate-100">Gallery</h2>
+            <p class="text-center text-slate-400 mb-12">Despite the Stellarons simply being a front for the groups real intentions, in the past, their efforts would often revolve around specific Stellarons. This changed upon the arrival of the Trailblazer</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Gallery Item 1 -->
+                <div class="gallery-item shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1579783902614-e3fb5141b0cb?w=400&h=400&fit=crop" alt="Gallery 1">
+                </div>
+                <!-- Gallery Item 2 -->
+                <div class="gallery-item shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1565042666747-338236d6cf5b?w=400&h=400&fit=crop" alt="Gallery 2">
+                </div>
+                <!-- Gallery Item 3 -->
+                <div class="gallery-item shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1516738901601-2e1b62dc0c45?w=400&h=400&fit=crop" alt="Gallery 3">
+                </div>
+                <!-- Gallery Item 4 -->
+                <div class="gallery-item shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1533631756012-0613b5ba34ca?w=400&h=400&fit=crop" alt="Gallery 4">
+                </div>
+                <!-- Gallery Item 5 -->
+                <div class="gallery-item shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=400&fit=crop" alt="Gallery 5">
+                </div>
+                <!-- Gallery Item 6 -->
+                <div class="gallery-item shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1500634148957-331899063b6f?w=400&h=400&fit=crop" alt="Gallery 6">
+                </div>
+                <!-- Gallery Item 7 -->
+                <div class="gallery-item shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1465056836239-1e0a0177d72b?w=400&h=400&fit=crop" alt="Gallery 7">
+                </div>
+                <!-- Gallery Item 8 -->
+                <div class="gallery-item shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=400&h=400&fit=crop" alt="Gallery 8">
+                </div>
+                <!-- Gallery Item 9 -->
+                <div class="gallery-item shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1505226613900-f80981c03ff1?w=400&h=400&fit=crop" alt="Gallery 9">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section id="cta" class="py-20 px-4 md:px-0 bg-gradient-to-r from-pink-600/20 via-purple-600/20 to-amber-600/20 border-t border-slate-800">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-6 text-slate-100">About Us</h2>
+            <img src="../src/assets/terminus.png" alt="terminus" class="w-1/5 mx-auto pb-6">
+            <p class="text-lg text-slate-300 mb-10">The Stellaron Hunters are a band of powerful individuals united under Elio, with the promise that each of them will fulfill their desires by following his script. They are said to work against the Interastral Peace Corporation. Due to Elio's ability to see possibilties, the group is often privy to information that would normally be impossible to obtain, such as the specific times when events will occur, or seemingly impossible butterfly effects. With this information, the group plans to set up the exact series of events required to prevent the Theory of Four Apocalypses.</p>
+            <div class="flex gap-6 justify-center flex-wrap">
+                <button class="btn btn-gradient btn-lg">Join With Us</button>
+                <button class="btn btn-outline btn-lg text-pink-400 border-pink-400 hover:bg-pink-400/10">Learn More</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer bg-slate-900 text-slate-400 p-10 border-t border-slate-800">
+        <nav>
+            <header class="footer-title text-slate-200">Komunitas</header>
+            <a class="link link-hover text-slate-400 hover:text-pink-400">Tentang Kami</a>
+            <a class="link link-hover text-slate-400 hover:text-pink-400">Galeri</a>
+            <a class="link link-hover text-slate-400 hover:text-pink-400">Event</a>
+            <a class="link link-hover text-slate-400 hover:text-pink-400">Anggota</a>
+        </nav>
+        <nav>
+            <header class="footer-title text-slate-200">Perusahaan</header>
+            <a class="link link-hover text-slate-400 hover:text-pink-400">Blog</a>
+            <a class="link link-hover text-slate-400 hover:text-pink-400">Karir</a>
+            <a class="link link-hover text-slate-400 hover:text-pink-400">Kontak</a>
+            <a class="link link-hover text-slate-400 hover:text-pink-400">FAQ</a>
+        </nav>
+        <nav>
+            <header class="footer-title text-slate-200">Legal</header>
+            <a class="link link-hover text-slate-400 hover:text-pink-400">Kebijakan Privasi</a>
+            <a class="link link-hover text-slate-400 hover:text-pink-400">Syarat Penggunaan</a>
+            <a class="link link-hover text-slate-400 hover:text-pink-400">Cookie Policy</a>
+        </nav>
+        <form>
+            <header class="footer-title text-slate-200">Hubungi Kami</header>
+            <fieldset class="form-control w-80">
+                <label class="label">
+                    <span class="label-text text-slate-400">Daftar untuk updates terbaru</span>
+                </label>
+                <div class="join">
+                    <input type="email" placeholder="email@example.com" class="input input-bordered join-item bg-slate-800 border-slate-700 text-slate-200 placeholder-slate-500" />
+                    <button class="btn btn-gradient join-item">Subscribe</button>
+                </div>
+            </fieldset>
+        </form>
+    </footer>
+
+    <!-- Copyright -->
+    <div class="bg-slate-950 text-slate-400 text-center py-4 border-t border-slate-800">
+        <p>&copy; 2026 P.S.H.T. (Persatuan Stellaron HunTer). Semua hak dilindungi.</p>
+    </div>
+
+    <script>
+        // Prevent page scroll ketika carousel slide ditekan
+        document.querySelectorAll('.carousel a[href^="#slide"], .carousel-thumb').forEach(link => {
+            link.addEventListener('click', (e) => {
+                const scrollPos = window.scrollY;
+                setTimeout(() => {
+                    window.scrollTo(0, scrollPos);
+                }, 0);
+            });
+        });
+    </script>
+</body>
+</html>
